@@ -5,6 +5,7 @@ import './index.css';
 import App from './App.jsx';
 import Layout from './Layout.jsx';
 import { Home, About, Contact, User, Github } from './components/index,jsx';
+import { githubInfoLoader } from './components/Github/GithubInfoLoader.js';
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,8 @@ const router = createBrowserRouter([
       },
       {
         path: "github",
-        element: <Github/>
+        element: <Github/>,
+        loader: githubInfoLoader,
       }
     ]
   }

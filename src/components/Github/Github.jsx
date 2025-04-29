@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react'
-
-const Github = () => {
-    const [data, setData] = useState([])
-    useEffect(() => {
-        fetch('https://api.github.com/users/Sazith')
-            .then(res => res.json())
-            .then(data => setData(data))
-    }, [])
-    console.log('data', data);
+import React from 'react'
+import { useLoaderData } from 'react-router-dom'
 
 
+ const Github = () => {
+    // const [data, setData] = useState([])
+    // useEffect(() => {
+    //     fetch('https://api.github.com/users/Sazith')
+    //         .then(res => res.json())
+    //         .then(data => setData(data))
+    // }, [])
+const data = useLoaderData()
     return (
         <>
             <div className="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -161,3 +161,4 @@ const Github = () => {
 }
 
 export default Github
+
