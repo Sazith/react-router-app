@@ -4,7 +4,7 @@ import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router
 import './index.css';
 import App from './App.jsx';
 import Layout from './Layout.jsx';
-import { Home, About, Contact } from './components/index,jsx';
+import { Home, About, Contact, User, Github } from './components/index,jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +22,14 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact/>
+      },
+      {
+        path: "user/:userId",
+        element: <User/>
+      },
+      {
+        path: "github",
+        element: <Github/>
       }
     ]
   }
